@@ -1,3 +1,8 @@
+/*
+ * Jaden Pleasants
+ * Assignment 6
+ * Small demo class for SerlailzeField
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
