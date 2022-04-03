@@ -14,6 +14,8 @@ public class GameManager : Singleton<GameManager> {
 
     private string CurrentLevelName = string.Empty;
 
+    public GameObject pauseMenu;
+
     public void LoadLevel(string levelName) {
         var ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
         if (ao == null) {
@@ -28,6 +30,24 @@ public class GameManager : Singleton<GameManager> {
         if (ao == null) {
             Debug.LogError($"[GameManager] Unable to unload level {levelName}");
             return;
+        }
+    }
+
+    public void UnloadCurrentLevel() => UnloadLevel(CurrentLevelName);
+
+    public void Pause() {
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+    }
+
+    public void Unpause() {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.P)) {
+            Pause();
         }
     }
 }
