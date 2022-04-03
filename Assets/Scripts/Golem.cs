@@ -18,4 +18,8 @@ public class Golem : Enemy {
         base.Awake();
         health = 120;
     }
+
+    public override void TakeDamage(int amount) {
+        throw new System.NotImplementedException();
+    }
 }

@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour {
+public abstract class Enemy : MonoBehaviour, IDamageable {
     protected float speed;
     protected int health;
 
@@ -17,4 +17,5 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     protected abstract void Attack();
+    public abstract void TakeDamage(int amount);
 }
