@@ -11,7 +11,11 @@ public abstract class Enemy : MonoBehaviour, IDamageable {
     protected float speed;
     protected int health;
 
+    [SerializeField] protected Weapon weapon;
+
     protected virtual void Awake() {
+        weapon = gameObject.AddComponent<Weapon>();
+
         speed = 5f;
         health = 100;
     }
