@@ -8,16 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: db7ccd46e9915b0b0b71aedcaafc2afc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo Level 1.unity
     guid: a4ae42c15b1f7981b876a2848658da13
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo Level 2.unity
     guid: a685fe4bcc95e49178df3f2bf3d2ffbf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo Level 3.unity
     guid: 709a8a14f859ddd249fc9704d3ba6bbb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Base Car Scene.unity
     guid: a6221b7ea189fee18bde912842683425
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 215500dada672032ea844f870cd8d9ea
   m_configObjects: {}
