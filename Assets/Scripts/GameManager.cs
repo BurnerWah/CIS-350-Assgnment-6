@@ -3,6 +3,7 @@
  * Assignment 6
  * Singleton game manager
  */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class GameManager : Singleton<GameManager> {
 
     public GameObject pauseMenu;
 
+    public GameObject winScreen;
+
     public void LoadLevel(string levelName) {
         var ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
         if (ao == null) {
@@ -23,6 +26,10 @@ public class GameManager : Singleton<GameManager> {
             return;
         }
         CurrentLevelName = levelName;
+    }
+
+    public void FinishLevel() {
+        winScreen.SetActive(true);
     }
 
     public void UnloadLevel(string levelName) {
